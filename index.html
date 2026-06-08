@@ -48,6 +48,7 @@ input:focus{outline:none;border-color:var(--accent);}
 <div class="result" id="dt-result"></div>
 </div></div>
 <script>
+'use strict';
 document.getElementById('now-ts').textContent=Math.floor(Date.now()/1000);
 function convert(){const ts=parseInt(document.getElementById('ts-input').value);if(!ts){document.getElementById('ts-result').textContent='Enter a timestamp';return}const d=new Date(ts*1000);document.getElementById('ts-result').innerHTML=`<span>UTC:</span> ${d.toUTCString()}<br><span>Local:</span> ${d.toString()}<br><span>ISO:</span> ${d.toISOString()}<br><span>Milliseconds:</span> ${ts*1000}`}
 function toTimestamp(){const v=document.getElementById('dt-input').value;if(!v){document.getElementById('dt-result').textContent='Select date';return}const ts=Math.floor(new Date(v).getTime()/1000);document.getElementById('dt-result').innerHTML=`<span>Timestamp:</span> ${ts}<br><span>Milliseconds:</span> ${ts*1000}`}
