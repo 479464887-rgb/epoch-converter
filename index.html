@@ -53,4 +53,9 @@ document.getElementById('now-ts').textContent=Math.floor(Date.now()/1000);
 function convert(){const ts=parseInt(document.getElementById('ts-input').value);if(!ts){document.getElementById('ts-result').textContent='Enter a timestamp';return}const d=new Date(ts*1000);document.getElementById('ts-result').innerHTML=`<span>UTC:</span> ${d.toUTCString()}<br><span>Local:</span> ${d.toString()}<br><span>ISO:</span> ${d.toISOString()}<br><span>Milliseconds:</span> ${ts*1000}`}
 function toTimestamp(){const v=document.getElementById('dt-input').value;if(!v){document.getElementById('dt-result').textContent='Select date';return}const ts=Math.floor(new Date(v).getTime()/1000);document.getElementById('dt-result').innerHTML=`<span>Timestamp:</span> ${ts}<br><span>Milliseconds:</span> ${ts*1000}`}
 document.getElementById('ts-input').value=Math.floor(Date.now()/1000);convert();
-</script></body></html>
+</script>  <footer style="padding:16px 24px;border-top:1px solid #21262d;text-align:center;font-size:12px;color:#484f58">
+    <a href="https://devkit-tools.xyz" style="color:#58a6ff;text-decoration:none;margin:0 8px">DevKit Tools</a>
+    <a href="https://devkit-tools.xyz/privacy.html" style="color:#58a6ff;text-decoration:none;margin:0 8px">Privacy</a>
+    <a href="https://devkit-tools.xyz/terms.html" style="color:#58a6ff;text-decoration:none;margin:0 8px">Terms</a>
+  </footer>
+</body></html>
